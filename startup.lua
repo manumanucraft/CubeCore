@@ -1,4 +1,4 @@
-
+print("Initialised")
 monitor=fs.open("monitor","r")
 if monitor then monitor = peripheral.wrap(h.readAll())
 else monitor = peripheral.find("monitor") end
@@ -16,7 +16,7 @@ else pr = "&7[Default Prefix] " end
 wl = fs.open("wl","r")
 if wl then wl = textutils.unserialize(wl.readAll())
 else wl = {} end
-
+print("All wrapped")
 m = monitor
 c = command
 
