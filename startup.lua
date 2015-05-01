@@ -1,9 +1,9 @@
 
 monitor=fs.open("monitor","r")
-if monitor then monitor = h.readAll()
+if monitor then monitor = peripheral.wrap(h.readAll())
 else monitor = peripheral.find("monitor") end
 command = fs.open("command,"r")
-if command then command = command.readAll()
+if command then command = peripheral.wrap(command.readAll())
 else command = peripheral.find("command") end
 show = fs.open("show","r")
 if show then show = show.readAll()
@@ -17,8 +17,8 @@ wl = fs.open("wl","r")
 if wl then wl = textutils.unserialize(wl.readAll())
 else wl = {} end
 
-m = peripheral.wrap(monitor)
-c = peripheral.wrap(command)
+m = monitor
+c = command
 
 function runCommand(command)
 c.setCommand(command)
