@@ -2,7 +2,7 @@ print("Initialised")
 monitor=fs.open("monitor","r")
 if monitor then monitor = peripheral.wrap(h.readAll())
 else monitor = peripheral.find("monitor") end
-command = fs.open("command,"r")
+command = fs.open("command","r")
 if command then command = peripheral.wrap(command.readAll())
 else command = peripheral.find("command") end
 show = fs.open("show","r")
